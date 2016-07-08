@@ -31,3 +31,16 @@
 */
 
 // YOUR CODE HERE
+function letterCount(str){
+  var freq = {};
+  var letters = str.replace(/[^A-Z0-9]/ig,"").toLowerCase();
+  for (var i = 0;i<letters.length;i++){
+    var char = letters[i];
+    if (freq[char]) {
+      freq[char]++;
+    }else {
+      freq[char] = 1;
+    }
+  }
+  return freq;
+}

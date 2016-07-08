@@ -45,3 +45,16 @@
 */
 
 // YOUR CODE HERE
+function parseQueryString(str){
+  var parser = {};
+  var arrayStr = str.split("&");
+  console.log(arrayStr);
+  arrayStr.forEach(function(newstr) {
+    var parsed = newstr.split("=");
+    console.log(parsed);
+    parser[parsed[0]]= parsed[1];
+  });
+  console.log(parser);
+}
+
+parseQueryString("a=apple&b=beet&b=blueberry&c=&d=10");
